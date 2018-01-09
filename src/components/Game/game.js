@@ -2,37 +2,42 @@ import React from 'react';
 import Nav from "../Nav/nav.js";
 import Container from "../Container/container.js";
 import data from "../../data.json";
-import Square from "../Square/square.js"
+import Square from "../Square/Square.js"
 
 
 class Game extends React.Component {
     state = {
         score: 0,
         topScore: 0,
-        data
+        data: data
     };
 
-    componentWillMount(){
 
+    handleClick = (id) => {
+        return (e) => {
+            let square = this.state.data.find(squareData => (squareData.id === id))
+            square.clicked = !square.clicked;
+
+        }
     }
 
-    componentWillReceiveProps(nextProps) {
 
+    //Math function
 
-    }
 
     render() {
 
         return (
             <div>
-                <Nav score={this.state.score} />
+                <Nav score={this.state.score}/>
                 <Container>
                     {this.state.data.map(square => (
                         <Square
-                            image={sqaure.image}
-                            id={sqaure.id}
-                            key={sqaure.id}
-                            clicked={sqaure.clicked} />
+                            image={square.image}
+                            id={square.id}
+                            key={square.id}
+                            clicked={square.clicked}
+                            handleClick={this.handleClick}/>
                     ))}
                 </Container>
             </div>

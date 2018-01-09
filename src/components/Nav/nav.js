@@ -5,7 +5,7 @@ const Nav = props => (
     <nav className="navbar">
         <ul>
             <li className="brand">
-                <a href="/">Avatar ClickIt Game</a>
+             Avatar ClickIt Game
             </li>
             <li>
                 Score: {props.score} | Top Score: {props.topScore}

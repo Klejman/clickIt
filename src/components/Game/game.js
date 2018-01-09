@@ -11,41 +11,15 @@ class Game extends React.Component {
         topScore: 0,
         data
     };
-    //
-    // componentWillMount(){
-    //
-    // }
-    //
-    // componentWillReceiveProps(nextProps) {
-    //
-    //
-    // }
 
-    mixSqaures = (id, clicked) => {
+    componentWillMount(){
 
-        const squareOrder = this.state.image;
+    }
 
-        if (clicked) {
-           squareOrder.forEach((square, index) => {
-                squareOrder[index].clicked = false;
-            });
-            return this.setState({
-                square: squareOrder.sort(() => Math.random() - 0.5),
-                topScore: this.state.score,
-                score: 0
-            })
-        }
-        else {
-            console.log("false");
-            squareOrder.forEach((square, index) => {
-                if (id === square.id) {
-                    squareOrder[index].clicked = true;
-                }
-            });
-            return this.setState({image: squareOrder.sort(() => Math.random() - 0.5), score: this.state.score + 1})
-        }
-    };
+    componentWillReceiveProps(nextProps) {
 
+
+    }
 
     render() {
 

@@ -1,0 +1,24 @@
+
+.nav {
+    background: linear-gradient(124deg,#91B4B2, #e6eafd, #ffc0cb);
+    color: #558cb4;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+
+.nav-text {
+    margin: auto;
+    width:100%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.nav li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+

@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    background: #91B4B2;
     min-height: 80%;
     flex-wrap: wrap;
     justify-content: center;
@@ -7,6 +8,7 @@
     padding-bottom: 50px;
     width: 90%;
     margin: 0 auto;
+    margin-top: 1%;
 }
 
 @media (min-width: 1100px) {
@@ -16,3 +18,8 @@
         width: 1100px;
     }
 }
+
+#root {
+    background: #f4fbfd;
+}
+

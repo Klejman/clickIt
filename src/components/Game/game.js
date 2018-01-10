@@ -15,14 +15,21 @@ class Game extends React.Component {
 
     handleClick = (id) => {
         return (e) => {
-            let square = this.state.data.find(squareData => (squareData.id === id))
+            let square = this.state.data.find(squareData => (squareData.id === id));
             square.clicked = !square.clicked;
 
+            if (square.clicked) {
+                return this.setState({
+                    square: square.sort(() => Math.random() - 0.5),
+                    topScore: this.state.score,
+                    score: 0
+                })
+            }
+
+
+            return this.setState({squareData: square.sort(() => Math.random() - 0.5), score: this.state.score + 1})
         }
-    }
-
-
-    //Math function
+    };
 
 
     render() {
